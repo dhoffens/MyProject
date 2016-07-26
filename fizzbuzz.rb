@@ -1,7 +1,4 @@
-n = 0
-
-while n < 100
-	n = n + 1
+for n in 1..100 
 
 if n % 15 == 0
 	puts "FizzBuzz"
@@ -11,6 +8,7 @@ elsif n % 3 == 0
 	puts "Fizz"
 else
 	puts n
+
 end
 end
 
