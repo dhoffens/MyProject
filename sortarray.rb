@@ -1,6 +1,8 @@
-a = "Have a nice day."
+a = "Have, ,a nice day."
 
-array = a.split(" ")
+punc = a.gsub(/[.?!,;]/, "")
+
+array = punc.split(" ")
 
 copy = array.sort {|x,y| x.upcase <=> y.upcase}
 
