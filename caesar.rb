@@ -1,16 +1,25 @@
 def solve_cipher(input)
-	array = []
-	num = input.chars.map(&:ord)
-
-	shift = 1
-	26.times do |shift|
-		array << num.map do |c|
-			((c + shift) < 123 ? (c + shift) : (c + shift) - 26).chr
-		end.join
+	letters_array = []
+	numbers_array = []
+	shifted_numbers = []
+	decrypted = []
+	letters_array = input.split(//)
+	letters_array.each do |x| 
+		numbers_array << x.ord
 	end
-
-	array
+	numbers_array.each do |x|
+		if (x-1)<65 || ((x-1)>90 && (x-1)<97) 
+			shifted_numbers << (x+25)
+		else
+		shifted_numbers << (x-1)
+		end
+	end
+	shifted_numbers.each do |x|
+		decrypted << x.chr
+	end
+	puts decrypted.join
+	if decrypted
+	end
 end
 
-puts solve_cipher("testing")
-
+solve_cipher("ifmmp")
