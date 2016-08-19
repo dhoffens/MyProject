@@ -1,116 +1,171 @@
-class Room
-	attr_reader :name, :description, :exit
-	
-	def initialize(name, description, exit)
-	    @name = name
-	    @description = description
-	    @exit = exit
-  	end
+class Rooms  
+  attr_accessor :room1,:room2,:room3,:room4,:room5 
+
+  def room1
+    user_choice = gets.chomp
+    puts "..."
+    puts "You are in a dark room..."
+    puts "... ..."
+    puts "You don't know how you got there. Your head is sore and you car barely see..."
+    puts "..."
+    puts "You start looking around the room. You see some broken furniture and class on the floor. There is broken glass scattered throughout the room and it smells of old rotting wood."
+    puts "What do you do next?"
+
+    if user_choice == "N"
+      room2
+      else 
+        room1  
+    end
+  end
+
+  def room2
+    puts "..."
+    puts "You are in a dark room..."
+    puts "... ..."
+    puts "You don't know how you got there. Your head is sore and you car barely see..."
+    puts "..."
+    puts "You start looking around the room. You see some broken furniture and class on the floor. There is broken glass scattered throughout the room and it smells of old rotting wood."
+    puts "What do you do next?"
+
+    if user_choice == "W"
+      room3
+    else
+      room2
+    end
+  end
+
+  def room3
+    puts "..."
+    puts "You are in a dark room..."
+    puts "... ..."
+    puts "You don't know how you got there. Your head is sore and you car barely see..."
+    puts "..."
+    puts "You start looking around the room. You see some broken furniture and class on the floor. There is broken glass scattered throughout the room and it smells of old rotting wood."
+    puts "What do you do next?"
+
+    if user_choice == "N"
+      room4
+    else
+      room3
+    end
+  end
+
+  def room4
+    puts "..."
+    puts "You are in a dark room..."
+    puts "... ..."
+    puts "You don't know how you got there. Your head is sore and you car barely see..."
+    puts "..."
+    puts "You start looking around the room. You see some broken furniture and class on the floor. There is broken glass scattered throughout the room and it smells of old rotting wood."
+    puts "What do you do next?"
+
+    if user_choice == "E"
+      room5
+    else
+      room4
+    end
+  end
+
+  def room5
+    puts "..."
+    puts "You are in a dark room..."
+    puts "... ..."
+    puts "You don't know how you got there. Your head is sore and you car barely see..."
+    puts "..."
+    puts "You start looking around the room. You see some broken furniture and class on the floor. There is broken glass scattered throughout the room and it smells of old rotting wood."
+    puts "What do you do next?"
+
+    if user_choice == "N"
+      victory
+    else
+      room5
+    end
+  end
+
 end
 
-	def describe_room( room )
-  		puts room.description
-	end
+class Actions
 
-# ----------
+  def death
+    puts "..."
+    puts "Oh no..."
+    puts "YOU MADE THE WRONG CHOICE!"
+    puts "YOU'RE DEAD!"
+    puts "......"
+    puts "......"
+    puts "......"
+    puts "......"
+    puts "......"
+    puts "Play again?"
 
-@rooms = [
-  Room.new("room1", "a dimly light room", "N"),
-  Room.new("room2", "a long corridor with a dining table", "W"),
-  Room.new("room3", "an outdoor garden fenced in with trees", "W"),
-  Room.new("room4", "a dungeon filled with armor and weapons", "N"),
-  Room.new("room5", "a treasure room with gold", "n/a")
-]
+    if user_choice == "Yes"
+      room1
+    else
+      goodbye
+    end
+  end
 
+  def goodbye
+    puts "Thanks for playing!"
+    puts "..."
+    puts "Get back to work."
+  end
+
+end
+
+ #  def enter_room( room )
+ #    describe_room
+ #  end
+
+	# def describe_room( room )
+ #  		puts room.description
+	# end
 
 # /---------------------------------------------------------
 #  ------------------- APPLICATION CODE --------------------
 #  ---------------------------------------------------------/
 
-puts "..."
-puts "..."
-puts "..."
-puts "You are in a dark room."
-puts "You don't know how you got there. Your head is sore and it is hard to see."
-puts "..."
-puts "The room is dimly lit by a candle that is soon to burn out. Through the dim light you can see a door to the north."
+puts "-" * 50
+puts "-" * 50
+puts "-" * 50
+puts "-" * 50
+puts "-" * 50
+puts "-" * 50
+puts "-" * 50
+puts "-" * 50
+puts "-" * 50
+puts "-" * 50
+puts "-" * 50
+puts "-" * 50
+puts "-" * 50
+puts " WELCOME TO THE IRON DUNGEON "
+puts "-" * 50
+puts "-" * 50
+puts "-" * 50
+puts "-" * 50
 
-user_input = nil
+user_choice = ""
 
-while user_input != "exit"
-  puts ""
+while user_choice != "exit"
+  
+  puts "..."
+  puts "..."
   puts "Use [N], [E], [S], [W] to navigate North, East, South, or West. If you see an item, use [item] to interact with it."
-  puts "What is your selection?"
-  user_input = gets.chomp
+  puts "Do you wish to continue? [Yes] or [No]"
+
+  user_choice = gets.chomp
 
   puts ""
 
-  if user_input == "N"
+  if user_choice == "Yes"
+  
     puts "You walk towards the door. It is a large Oak door that seems to weigh a ton. The doorknob is rusty and looks as if it hasn't been opened in years. You reach for it and turn the knob."
     puts "..."
     puts "..."
-    puts "- [capacity] to see highest capacity first"
-    puts "- [city] to filter by city"
-    puts "- [name] to name your own price"
-
-  elsif user_input == "exit"
-    puts "Goodbye."
-
-  elsif user_input == "list" || user_input == "lowest"
-    lowest_first = homes.sort { |home_a, home_b| home_a.price <=> home_b.price }
-      #   |
-      #   --------------
-      #                |
-      #                v
-    print_homes( lowest_first )
-
-  elsif user_input == "highest"
-    highest_first = homes.sort { |home_a, home_b| home_b.price <=> home_a.price }
-      #    |
-      #    --------------
-      #                 |
-      #                 v
-    print_homes( highest_first )
-
-  elsif user_input == "capacity"
-    by_capacity = homes.sort { |home_a, home_b| home_b.capacity <=> home_a.capacity }
-      #  |
-      #  --------------
-      #               |
-      #               v
-    print_homes( by_capacity )
-
-  elsif user_input == "city"
-    puts "Enter the name of a city:"
-    user_city = gets.chomp.downcase
-
-    puts ""
-
-    city_homes = homes.select { |the_home| the_home.city.downcase == user_city }
-      # |
-      # --------------
-      #              |
-      #              v
-    print_homes( city_homes )
-
-  elsif user_input == "name"
-    puts "Enter your desired price:"
-    user_price = gets.chomp.to_f
-
-    puts ""
-
-    matched_home = homes.find { |the_home| the_home.price == user_price }
-
-    if matched_home == nil
-      puts "No homes available for $#{user_price} a night."
-    else
-      # Make an array of one so we can reuse the existing method
-      matches = [matched_home]
-
-      print_homes( matches )
-    end
-
+    
+    Rooms.room1
+  
   else
-    puts "No understand. Beep boop."
+    puts "Okay, goodbye."
   end
 end
