@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="/styles.css">
+
+<a href="/">Home</a> <a href="/company">Company</a> <a href="/about">About</a> <a href="/pizza">Pizza</a>
+
+<h1> Our Favorite Pizza </h1>
+
+<p> So good it'll make you slap your dad! </p>
+
+<img src="/slap.gif">
+
+<ul>
+	
+	<% @pizza_ingredients.each do |ingredient| %>
+	<li>
+		Ingredient: <%= ingredient %>
+	</li>
+<% end %>
+
+</ul>

@@ -1,0 +1,24 @@
+<a href="/">Home</a> <a href="/company">Company</a> <a href="/about">About</a> <a href="/pizza">Pizza</a>
+
+<h1> About Us </h1>
+
+<p>We are disrupting the Sinatra industry with magical synergy workflows and dynamic processors.</p>
+
+<h2> Our values </h2>
+
+<ul>
+	<li>beeroclock</li>
+	<li>reddit</li>
+</ul>
+
+<% if Date.today.tuesday? %>
+	<p>
+		Freaky Frank is <b>NOT</b> a fan of <%=Date.today%> like today.
+	</p>
+	<% end %>
+
+<% if Date.today.wednesday? %>
+	<p>
+		Freaky Frank is <b>NOT</b> a fan of Wednesdays like today.
+	</p>
+	<% end %>
