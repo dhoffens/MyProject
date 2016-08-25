@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register</title>
+</head>
+<body>
+
+<form action="/verify" method="POST">
+  <input type="text" name="email" placeholder="e-mail"> <br>
+  <input type="password" name="password" placeholder="password"><br>
+  <button type="submit">Create account</button>
+</form>
+<br>
+
+For the password to be secure it must fulfill ALL of the following rules:
+
+<ul>
+	<li>The password must be longer than 7 characters</li>
+	<li>The password must contain at least 1 letter, 1 number and 1 symbol (e.g. "#", "%", etc)</li>
+	<li>The password must contain at least 1 uppercase and 1 lowercase letter</li>
+	<li>The password must NOT contain neither the name nor the domain of the email.</li>
+</ul>
+
+</body>
+</html>
