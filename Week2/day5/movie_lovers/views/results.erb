@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<link rel="stylesheet" type="text/css" href="/styles.css">
+		<title>Results | Movie Lovers</title>
+	</head>
+	<body>
+		<h1> Movie Trivia </h1>
+			<h2> <%= @question %> </h2>
+			<h3>Showing <%= @movies.length %> results </h3>
+			<% @movies.each_with_index do |movie, index| %>
+				<% if @random_movie == movie %>
+					<img src='<%= movie.poster %>' onclick="alert('CORRECT')">
+				<% else %>
+			 		<img src='<%= movie.poster %>' onclick="alert('INCORRECT')">
+				<% end %>
+					<% if index >= 8 %>
+						<% break %>
+					<% end %>
+			<% end %>
+	</body>
+</html>
