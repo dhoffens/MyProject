@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<link rel="stylesheet" type="text/css" href="/styles.css">
+			<title>Home | Sinatra Blog</title>
+		</head>
+			<body>
+				<h1>My Blog</h1>
+					<br>
+					<IMG class="displayed" src="/woah.gif"> 
+				<h2>Posts</h2> 
+					<a href="/new_post">New Post</a>
+						<% @posts.each_with_index do |post, index| %>
+						<ol><a href="/details/<%=index%>"><%= post.title %></a></ol>
+						<% end %>
+			</body>
+	</html>

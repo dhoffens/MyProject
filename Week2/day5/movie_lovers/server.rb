@@ -9,11 +9,10 @@ get "/" do
 	erb :home
 end
 
-post "/search_results" do
+post "/submit_post" do
 
 	search = Imdb::Search.new(params[:search])
 	@movies = search.movies
-
 	game.add_movies(@movies)
     @random_movie = game.get_random_movie
   	@random_date = @random_movie.title.match(/\(\d+\)/)[0]

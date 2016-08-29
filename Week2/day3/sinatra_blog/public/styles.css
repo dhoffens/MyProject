@@ -1,0 +1,50 @@
+body {
+	background-color: #d9d9d9;
+}
+
+h1 {
+	font-family: sans-serif;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+h2 {
+	font-family: sans-serif;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+p {
+	font-family: sans-serif;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+a {
+	font-family: sans-serif;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+IMG.displayed {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.labels {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+label {
+	font-family: sans-serif;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;	
+}
