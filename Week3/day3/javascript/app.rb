@@ -7,3 +7,7 @@ count_machine = ColorCounter.new
 p count_machine.count_colors("indigo", color_array) == 1
 p count_machine.count_colors("teal", color_array) == 3
 p count_machine.count_colors("periwinkle", color_array) == 2
+
+caps_colors = color_array.map { |the_color| the_color.upcase  }
+
+p caps_colors
