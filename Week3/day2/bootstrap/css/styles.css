@@ -1,0 +1,14 @@
+#trello {
+	position: relative;
+	text-align: center;
+	padding-top: 4px;
+}
+
+.right {
+	text-align: right;
+}
+
+.inline {
+	display: inline-block;
+}
+

@@ -1,0 +1,22 @@
+#header-image {
+	background-image: url(https://media.giphy.com/media/RWjE2OR19y2GI/giphy.gif);
+	background-repeat: no-repeat;
+	height: 300px;
+}
+
+@media screen and (min-width: 786px) {
+	#header-image {
+		background-image: url(https://media.giphy.com/media/13ZKoq5uvLMtNu/giphy.gif);
+	}
+}
+
+@media screen and (min-width: 992px) {
+	#header-image {
+		background-image: url(https://media.giphy.com/media/26BRzozg4TCBXv6QU/giphy.gif);
+	}
+}
+@media screen and (min-width: 1200px) {
+	#header-image {
+		background-image: url(https://media.giphy.com/media/3o6Zt52WdGao5GM4XC/giphy.gif);
+	}
+}

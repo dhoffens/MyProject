@@ -1,0 +1,39 @@
+code {
+	background: #2db34a;
+	border-radius: 6px;
+	color: #fff;
+	display: block;
+	padding: 24px 15px;
+	text-align: center;
+}
+
+header {
+	position: absolute;
+	top: 150px;
+	left: 0px;
+}
+
+section {
+	position: fixed;
+	top: 50px;
+	left: 50px;
+}
+
+
+aside, 
+footer {
+	margin: 0 1.5% 24px 1.5%;
+	position: relative;
+	top: 200px;
+	left: -400px;
+}
+
+img {
+	float: right;
+	width: 400px;
+}
+
+.image-container {
+	overflow: auto;
+	margin-top: 200px;
+}
