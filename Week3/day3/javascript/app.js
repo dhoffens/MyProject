@@ -1,15 +1,4 @@
-function countColors(theColor, colorArray) {
-	var count = 0;
-
-	colorArray.forEach(function (tempColor) {
-
-		if (tempColor === theColor) {
-			count += 1;
-		}
-	});
-
-	return count;
-}
+var countColors = require("./lib/count-colors.js");
 
 var colorArray = ["indigo", "teal", "lilac", "teal", "periwinkle", "black", "periwinkle", "baby blue", "teal"];
 
