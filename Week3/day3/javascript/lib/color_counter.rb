@@ -9,3 +9,5 @@ class ColorCounter
 		count
 	end
 end
+
+#hello
