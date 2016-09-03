@@ -1,0 +1,74 @@
+.jumbotron {
+	background: url(https://i.imgur.com/lxshr2p.jpg) 50% 50% no-repeat;
+	background-size: cover;
+	position: relative;
+	width: 100%;
+	height: 360px;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	margin: 0;
+
+}
+
+.elon {
+	background: url(http://i.telegraph.co.uk/multimedia/archive/02778/MUSKsum_2778344b.jpg) 50% 50% no-repeat;
+	width: 200px;
+	height: 200px;
+	position: relative;
+	padding: 20px;
+	margin: 20px;
+	border-radius: 25px;
+	border: 5px solid white;
+/*	left: 90px;
+	bottom: 180px;*/
+}
+
+#follow-button {
+	float: right;
+	padding: 5px 15px 5px 15px;
+}
+
+#toprow {
+	line-height: 46px;
+}
+
+.row a {
+	padding: 10px;
+	padding-left: 40px;
+}
+
+.up {
+	position: relative;
+	left: 90px;
+	bottom: 200px;
+}
+
+body {
+	background-color: #e0e0eb;
+}
+
+.row {
+	background-color: white;
+}
+
+.tweets {
+	padding: 20px;
+}
+
+.search-twitter {
+	float: right;
+	display: block;
+    box-sizing: border-box;
+    width: 221px;
+    height: 32px;
+    padding: 10px 27px 6px 12px;
+    font-size: 12px;
+    line-height: 1;
+    color: #292f33;
+    background-color: #f5f8fa;
+    border: 1px solid #e1e8ed;
+    border-radius: 21px;
+    transition: all .2s ease-in-out;
+    margin-top: 7px;
+}

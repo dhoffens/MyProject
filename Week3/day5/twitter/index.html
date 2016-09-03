@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<title>Twatter</title>
+</head>
+<body>
+
+<div>
+<!-- top bar, home, etc. -->
+	<div class="row" id="toprow">
+		<div class="col-md-6">
+			<a href="#"><img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/twitter-128.png" width="23px" height="21px"> Home</a>
+			<a href="#"><span class="glyphicon glyphicon-flash"></span>
+			Moments</a>
+		</div>
+
+		<div class="col-md-3">
+			<input class="search-twitter" type="text" name="search" placeholder="Search Twitter">
+		</div>		
+		<div class="col-md-3">
+			<a href="#">Have an account? Log in</a>
+		</div>
+	</div>
+
+	<div class="jumbotron jumbotron-fluid">
+	</div>
+
+	<div class="row">
+		<div class="col-md-3">
+		<!-- empty to hold space for user info -->
+		</div>
+		<!-- navbar counting tweets below jumbo -->
+		<div class="col-md-9"> 
+			<nav class="navbar navbar-default">
+				<button type="button" class="btn btn-default btn-lg">Tweets<br>2,128</button>
+				<button type="button" class="btn btn-default btn-lg">Following<br>50</button>
+				<button type="button" class="btn btn-default btn-lg">Followers<br>4.99M</button>
+				<button type="button" class="btn btn-default btn-lg">Likes<br>300</button>
+				<button type="button" class="btn btn-default btn-lg" id="follow-button">
+	 			<span class="glyphicon glyphicon-user" aria-hidden="true"></span> Follow </button>
+			</nav>
+		</div>
+	</div>
+<!-- user name, pic, bio -->
+	<div class="row">
+		<div class="col-md-3 up">
+			<div class="elon"></div>
+			<strong>Elon Musk<span><img src="http://i.imgur.com/YdVVb.png"></span></strong>
+			<p>@elonmusk</p>
+			<p>Tesla, SpaceX, SolarCity, PayPal &<br> OpenAI</p>
+			<p>1 AU</p>
+			<p>Joined June 2009</p>
+			<a href="#">199 Photos and videos</a>
+		</div>
+<!-- tweets -->
+	<div class="row tweets">
+		<span><a href="#">Tweets</a></span>
+		<span><a href="#">Tweets & Replies</a></span>
+		<span><a href="#">Media</a></span>
+		<!-- first tweet -->
+		<div class="tweets">
+			<p>Elon Musk @elonmusk  24h</p>
+			<p>Built a spaceship today!</p>
+			<span class="glyphicon glyphicon-arrow-left"></span>
+			<span class="glyphicon glyphicon-refresh">  375  </span>
+			<span class="glyphicon glyphicon-heart">  2000  </span>
+			<span class="glyphicon glyphicon-option-horizontal"></span>
+		</div>
+	</div>
+	</div>
+</div>
+</body>
+</html>
