@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get '/' => 'visitors#home'
-  get '/about' => 'visitors#about', as: :about
-  get '/blog' => 'visitors#blog'
-  get '/contact' => 'visitors#contact'
+  get '/' => 'visitors#home', as: :home
+  get 'company/about' => 'visitors#about', as: :about
+  get '/blog' => 'visitors#blog', as: :blog
+  get '/contact' => 'visitors#contact', as: :contact
 end
