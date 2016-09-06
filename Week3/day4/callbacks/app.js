@@ -16,11 +16,11 @@
 // });
 
 var read = require("read");
-
 var theOptions = { prompt: "What do you want?"};
+var birthday = { prompt: "When is your birthday?"};
 
 function greetUser (theError, givenName) {
-	console.log(`Hello,  ${givenName}!`);
+	console.log(`Hello,  ${givenName}! happy birthday ${birthday}`);
 }
 
 read(theOptions, greetUser);

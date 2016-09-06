@@ -1,17 +1,12 @@
-options = {
-	prompt: "What is your name?\n"
+"use strict";
+
+
+class Question {
+  constructor (id, question_text, answer) {
+    this.id = id;
+    this.question_text = question_text;
+    this.answer = answer;
+  }
 }
 
-read(options, displayName)
-
-function displayName (err, name) {
-	console.log("Your name is: " + name)
-}
-
-var points = 0;
-
-function addPoints () {
-	if (question === correct) {
-		points += 1;
-	}
-}
+module.exports = Question;
