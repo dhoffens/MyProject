@@ -1,14 +1,14 @@
 <%# add navigation links to this file %>
-<!-- Links will go here -->
+Links will go here
 <li>
-  <%= link_to 'Home', home_path %>
+  <%= link_to_unless_current 'Home', home_path %>
 </li>
 <li>
-	<%= link_to 'About', about_path %>
+	<%= link_to_unless_current 'About', about_path %>
 </li>
 <li>
-	<%= link_to 'Blog', blog_path %>
+	<%= link_to_unless_current 'Blog', blog_path %>
 </li>
 <li>
-	<%= link_to 'Contact', contact_path %>
+	<%= link_to_unless_current 'Contact', contact_path %>
 </li>
