@@ -16,6 +16,22 @@ function theCallbackFunction (theError, theAnswer) {
 	function callbackNumberTwo (theErrorTwo, theAnswerTwo) {
 		console.log("Answer recorded");
 		console.log(`Answer: ${theAnswerTwo}`);		
+	
+		options.prompt = "Do you feel superior to others?";
+		read(options, callbackNumberThree);
+
+		function callbackNumberThree (theErrorThree, theAnswerThree) {
+			console.log("Answer recorded");
+			console.log(`Answer: ${theAnswerThree}`);	
+		
+			options.prompt = "Do you clean up after yourself?";
+			read(options, callbackNumberFour);
+
+			function callbackNumberFour (theErrorFour, theAnswerFour) {
+			console.log("Answer recorded");
+			console.log(`Answer: ${theAnswerFour}`);	
+			}
+		}
 	}
 }
 
