@@ -23,6 +23,9 @@ function theCallbackFunction (theError, theAnswer) {
 		var options = { prompt: `Question #${i+1}: ${questionStrings[i]}`}
 		console.log("");
 		read(options, theCallbackFunction);	
+	} 
+	else {
+		console.log("Thanks for playing! You are a....normal")
 	}
 }
 
@@ -31,39 +34,3 @@ var i = 0;
 var options = { prompt: `Question #${i+1}: ${questionStrings[i]}`}
 
 read(options, theCallbackFunction);
-
-
-
-// function theCallbackFunction (theError, theAnswer) {
-// 	console.log("Answer recorded");
-// 	console.log(`Answer: ${theAnswer}`);
-
-// 	options.prompt = "Do you find yourself initiating conversations?";
-// 	read(options, callbackNumberTwo);
-
-// 	function callbackNumberTwo (theErrorTwo, theAnswerTwo) {
-// 		console.log("Answer recorded");
-// 		console.log(`Answer: ${theAnswerTwo}`);		
-	
-// 		options.prompt = "Do you feel superior to others?";
-// 		read(options, callbackNumberThree);
-
-// 		function callbackNumberThree (theErrorThree, theAnswerThree) {
-// 			console.log("Answer recorded");
-// 			console.log(`Answer: ${theAnswerThree}`);	
-		
-// 			options.prompt = "Do you clean up after yourself?";
-// 			read(options, callbackNumberFour);
-
-// 			function callbackNumberFour (theErrorFour, theAnswerFour) {
-// 			console.log("Answer recorded");
-// 			console.log(`Answer: ${theAnswerFour}`);	
-// 			}
-// 		}
-// 	}
-// }
-
-// read(options, theCallbackFunction);
-
-// console.log("");
-// console.log("Last line");
