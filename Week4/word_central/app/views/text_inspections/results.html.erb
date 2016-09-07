@@ -8,14 +8,6 @@
 <h4>At an average rate of 275 words per minute, it would take <%=@word_count/4.583.round%> seconds to read your text. Your 10 most used words were:</h4>
 
 
-<%= @sorted[0] %> <br>
-<%= @sorted[1] %> <br> 
-<%= @sorted[2] %> <br>
-<%= @sorted[3] %> <br>
-<%= @sorted[4] %> <br>
-<%= @sorted[5] %> <br>
-<%= @sorted[6] %> <br>
-<%= @sorted[7] %> <br>
-<%= @sorted[8] %> <br>
-<%= @sorted[9] %> 
-
+<% @sorted.each do |item| %>
+<%= "#{item[0]}" + " = " + "#{item[1]}" + " times." %><br>
+<% end %>

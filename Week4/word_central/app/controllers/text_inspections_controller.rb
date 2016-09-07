@@ -17,7 +17,7 @@ class TextInspectionsController < ApplicationController
 				@counts[word] = 1
 			end
 		end
-		@sorted = @counts.sort_by {|a,b| b}.reverse
+		@sorted = @counts.sort_by {|a,b| b}.reverse.take(10)
 		render 'results'
 	end
 end
