@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project: one
+  hours: 1
+  minutes: 1
+  comment: MyText
+  date: 2016-09-08 11:27:38
+
+two:
+  project: two
+  hours: 1
+  minutes: 1
+  comment: MyText
+  date: 2016-09-08 11:27:38

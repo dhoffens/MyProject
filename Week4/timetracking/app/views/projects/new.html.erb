@@ -1,0 +1,13 @@
+<!-- show html form to input new project -->
+
+<h1> Add a new project </h1>
+
+<%= form_for @new_project do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name, required: true %>
+<br>
+<%= f.label :description %>
+<%= f.text_area :description %>
+<br>
+<%= f.button %>
+<% end %>

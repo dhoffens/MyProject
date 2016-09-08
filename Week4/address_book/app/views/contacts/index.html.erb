@@ -1,0 +1,9 @@
+<ul>
+	<% @contacts.each do |person| %>
+	<li>
+	<%= person.name + ", " + person.address + ", " + person.phone_number + ", " + person.email %>
+	</li>
+	<% end %>
+</ul>
+
+<%= link_to 'New', new_path %>
