@@ -7,4 +7,7 @@ class Project < ApplicationRecord
 		length: { maximum: 30 },
 		format: { with: /\A[a-zA-Z\s]+\Z/}
 
+	def self.clean_old
+		where("created_at > ?", 7.days.ago).destroy_all
+	end
 end
