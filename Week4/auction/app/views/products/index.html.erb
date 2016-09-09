@@ -1,0 +1,17 @@
+<h1> Products </h1>
+
+<h2> List a new product: </h2>
+
+<%= link_to 'New Product', product_new_path %>
+
+<h2> For sale: </h2>
+
+<ul>
+	<% @products.each do |item| %>
+		<li>
+			<%= item.title %> -
+			<%= item.description %> --
+			<%= item.deadline %> 
+		</li>
+	<% end %>
+</ul>

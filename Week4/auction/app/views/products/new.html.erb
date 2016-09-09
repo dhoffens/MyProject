@@ -1,0 +1,14 @@
+<h1>Post some shit</h1>
+
+<%= form_for @product do |x| %>
+	<%= x.label :title %>
+	<%= x.text_field :title %>
+	<br>
+	<%= x.label :description %>
+	<%= x.text_field :description %>
+	<br>
+	<%= x.label :deadline %>
+	<%= x.datetime_field :deadline %>
+	<br>
+	<%= x.submit "Post that shit" %>
+<% end %>
