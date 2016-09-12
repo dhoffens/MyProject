@@ -7,7 +7,7 @@ class TimeEntriesController < ApplicationController
 	# - all entries for the project
 	
 	@project = Project.find(params[:project_id])
-	@time_entries = @project.time_entries.where(created_at: (Time.now.beginning_of_month..Time.now.end_of_month))
+	@time_entries = @project.time_entries
 	end
 
 	def new
@@ -56,9 +56,11 @@ class TimeEntriesController < ApplicationController
 		redirect_to "/projects/#{project.id}/time_entries"
 	end
 
+
+
 	private
 
-	def entry_params
+	def time_entry_params
 		params.require(:time_entry).permit(:hours, :minutes, :date)
 	end
 end

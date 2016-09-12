@@ -1,3 +1,8 @@
 <%= @project.id %>.
 <%= @project.name %> -
 <%= @project.description %>
+
+<br>
+<br>
+
+<%= link_to 'Time Entries', project_time_entries_path(@project.id) %>
