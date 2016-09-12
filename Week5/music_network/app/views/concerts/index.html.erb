@@ -1,0 +1,27 @@
+<h2> Concerts </h2>
+
+
+<div>
+<h3> Coming up today... </h3>
+
+<% @concerts_today.each do |c| %>
+	<%= link_to "#{c.artist}", concert_path(c) %> @ 
+	<%= c.venue %>
+	<br>
+<% end %>
+<br>
+</div>
+<hr>
+
+<div>
+<h3> Later on this month... </h3>
+
+<% @concerts_month.each do |c| %>
+<%= link_to "#{c.artist}", concert_path(c) %> @ 
+	<%= c.venue %>
+	<br>
+<% end %>
+<br>
+</div>
+
+<%= link_to "Add new concert", new_concert_path %>

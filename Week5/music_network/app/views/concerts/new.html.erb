@@ -1,0 +1,23 @@
+<h1> Add a New Concert </h1>
+
+<%= form_for @new_concert do |f| %>
+<%= f.label :artist %>
+<%= f.text_field :artist, required: true, class: "box" %>
+<br>
+<%= f.label :venue %>
+<%= f.text_field :venue, required: true, class: "box" %>
+<br>
+<%= f.label :city %>
+<%= f.text_field :city, required: true, class: "box" %>
+<br>
+<%= f.label :date %>
+<%= f.datetime_field :date, required: true, class: "box" %>
+<br>
+<%= f.label :price %>
+<%= f.text_field :price, class: "box" %>
+<br>
+<%= f.label :description %>
+<%= f.text_field :description, class: "box" %>
+<br>
+<%= f.button %>
+<% end %>
