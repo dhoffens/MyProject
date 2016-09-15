@@ -6,9 +6,8 @@ $(document).ready(function () {
 function artistSearch (search) {
 
 	search.preventDefault();
-	console.log('trying to search!');
-
 	var newArtist = $('.js-artist').val();
+	$('.js-artists').empty();
 
 	$.ajax({
 		type: "GET",
@@ -19,35 +18,36 @@ function artistSearch (search) {
 }
 
 function wellDone (response) {
-	console.log('search success');
 
-	var theResult = response.artists.items[0];
+	var theResult = response.artists.items;
 	console.log(theResult);
-	
-	var resultId = theResult.id;
-	console.log(resultId);
+	theResult.forEach(function(theArtist) {
 
-	var html = `
-		<li>${theResult.name}</li>
-		<li><img src=${theResult.images[0].url}></li>
-		`;
+		if (theArtist.images.length > 0) {
+			var html = `
+				<li>
+					${theArtist.name}
+					<img class="what" data-id="${theArtist.id}" src=${theArtist.images[0].url}>
+				</li>
+				`;
+		}
 
-		$('.js-artists').append(html);
+			$('.js-artists').append(html);
+	})
+				$('.what').on('click', albumSearch );
 
-			$('.js-artists').on('click', albumSearch);
-	
-			function albumSearch (album) {
-			album.preventDefault();
-			console.log('lets look for albums');
+				function albumSearch (e) {
+				var resultId = $(e.currentTarget).data("id");
+				$('.js-albums').empty();
 
-			$.ajax({
-				type: "GET",
-				url: `https://api.spotify.com/v1/artists/${resultId}/albums`,
-				success: showAlbums,
-				error: noAlbums
-			})
-			}
-	}
+					$.ajax({
+						type: "GET",
+						url: `https://api.spotify.com/v1/artists/${resultId}/albums`,
+						success: showAlbums,
+						error: noAlbums
+					})
+				}
+}
 
 function ohNo () {
 	console.log('you done fucked up');
@@ -55,18 +55,23 @@ function ohNo () {
 
 function showAlbums (theAlbums) {
 	console.log(theAlbums)
-	console.log('attempting to show albums');
 
-	var albumsShow = theAlbums.items[0];
+	$('.js-album-modal').modal('show');
 
-	console.log(albumsShow);
+	var albumResults = theAlbums.items;
 
-	var albumsHtml = `
-	<li>${albumsShow.name}</li>
-	<li><img src=${albumsShow.images[0].url}></li>`
+	albumResults.forEach(function(theAlbum) {
 
-	$('.js-albums').append(albumsHtml);
+		if (theAlbum.images.length > 0) {
+			var albumsHtml = `
+			<li>
+				${theAlbum.name}
+				<img src=${theAlbum.images[0].url}>
+			</li>`
 
+			$('.js-albums').append(albumsHtml);
+		}
+})
 }
 
 function noAlbums () {

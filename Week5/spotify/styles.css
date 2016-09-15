@@ -1,0 +1,28 @@
+img {
+	height: 500px;
+	width: auto;
+	align-self: center;
+	text-align: center;
+}
+
+h1 {
+	padding: 50px;
+	text-align: center;
+}
+
+form {
+	padding: 50px;
+	text-align: center;
+}
+
+body {
+	background-color: #FF5733;
+}
+
+div {
+	text-align: center;
+}
+
+footer {
+	text-align: center;
+}
