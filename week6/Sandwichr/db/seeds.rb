@@ -14,9 +14,3 @@ ing1 = Ingredient.create!(name: "cheese", calories: 80)
 ing2 = Ingredient.create!(name: "tomatoes", calories: 30)
 ing3 = Ingredient.create!(name: "olives", calories: 50)
 
-
-
-sand1.ingredients.push(ing1)
-sand1.ingredients.push(ing2)
-sand1.ingredients.push(ing3)
-
