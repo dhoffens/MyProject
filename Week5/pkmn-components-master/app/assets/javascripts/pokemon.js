@@ -22,6 +22,8 @@ PokemonApp.showPokemonModal = function (result) {
 
 	console.log(result);
 
+	//adding pokemon info
+
 	$('.js-poke-name').html(result.name);
 	$('.js-poke-number').html(result.pkdx_id);
 	$('.js-poke-height').html(result.height);	
@@ -34,11 +36,26 @@ PokemonApp.showPokemonModal = function (result) {
 	$('.js-poke-speed').html(result.speed);
 	$('.js-poke-types').html(result.types[0].name);
 
-	console.log(result.types)
+	// if second type, show it
+
 	if (result.types[1] !== undefined) {
 		$('.js-poke-types2').html(result.types[1].name)
 	}
+	
+	// show modal
+
 	$('.js-pokemon-modal').modal('show');
+
+		//evolutions
+
+		$('.js-evolutions').on('click', showEvolutions)
+
+		function showEvolutions () {
+			console.log("evolve")
+
+			
+		}
+
 };
 
 PokemonApp.handleError = function (theError) {
