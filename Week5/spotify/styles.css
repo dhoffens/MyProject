@@ -3,6 +3,7 @@ img {
 	width: auto;
 	align-self: center;
 	text-align: center;
+	display: inline-block;
 }
 
 h1 {
@@ -25,4 +26,16 @@ div {
 
 footer {
 	text-align: center;
+}
+
+.album-image {
+	height: 400px;
+	width: auto;
+	display: inline-block;
+}
+
+.artist-image {
+	height: 300px;
+	width: auto;
+	display: inline-block;
 }

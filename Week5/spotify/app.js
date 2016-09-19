@@ -20,21 +20,23 @@ function artistSearch (search) {
 function wellDone (response) {
 
 	var theResult = response.artists.items;
+	console.log(response);
 	console.log(theResult);
 	theResult.forEach(function(theArtist) {
 
 		if (theArtist.images.length > 0) {
 			var html = `
-				<li>
+					<li>
 					${theArtist.name}
-					<img class="what" data-id="${theArtist.id}" src=${theArtist.images[0].url}>
-				</li>
-				`;
+					<br>
+					<img class="artist-image" data-id="${theArtist.id}" src=${theArtist.images[0].url}>
+					</li>
+					<br>`;
 		}
 
 			$('.js-artists').append(html);
 	})
-				$('.what').on('click', albumSearch );
+				$('.artist-image').on('click', albumSearch );
 
 				function albumSearch (e) {
 				var resultId = $(e.currentTarget).data("id");
@@ -46,6 +48,9 @@ function wellDone (response) {
 						success: showAlbums,
 						error: noAlbums
 					})
+
+				$('.js-artist').val("");
+
 				}
 }
 
@@ -66,7 +71,7 @@ function showAlbums (theAlbums) {
 			var albumsHtml = `
 			<li>
 				${theAlbum.name}
-				<img src=${theAlbum.images[0].url}>
+				<img class="album-image" src=${theAlbum.images[0].url}>
 			</li>`
 
 			$('.js-albums').append(albumsHtml);
