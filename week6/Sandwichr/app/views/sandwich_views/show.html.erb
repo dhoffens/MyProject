@@ -1,10 +1,22 @@
 <h1>Sandwich Details</h1>
 
-Name: <%= @sandwich.name %><br>
-Bread type: <%= @sandwich.bread_type %><br>
-Total Calories: <%= @sandwich.total_calories %><br><br>
-Ingredients:<br> <% @ingredients.each do |i| %>
+<ul class="js-sandwich-details" data-sand-id="<%= @sandwich.id %>"> 
+	<li> Name: <%= @sandwich.name %></li>
+
+	<li>Bread type: <%= @sandwich.bread_type %></li>
+	<li>Total Calories: <span class="calories"><%= @sandwich.total_calories %></span></li>
+	<li>
+		Ingredients:<br>
+		<div class="js-ingredients">
+			<% @ingredients.each do |i| %>
 				<%= i.name %>:
 				<%= i.calories %> calories <br>
-				<% end %>
+			<% end %>
+		</div>
+	</li>
+</ul>
 
+All ingredients:
+<% @all_ing.each do |i| %>
+<button class="ing-btn" data-id="<%= i.id %>"><%= i.name %></button>
+	<% end %>
