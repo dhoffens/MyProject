@@ -1,0 +1,10 @@
+<h1>Sandwich Details</h1>
+
+Name: <%= @sandwich.name %><br>
+Bread type: <%= @sandwich.bread_type %><br>
+Total Calories: <%= @sandwich.total_calories %><br><br>
+Ingredients:<br> <% @ingredients.each do |i| %>
+				<%= i.name %>:
+				<%= i.calories %> calories <br>
+				<% end %>
+

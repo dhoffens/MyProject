@@ -1,0 +1,5 @@
+<h1>Sandwiches</h1>
+
+<% @sandwich.each do |s| %>
+<%= link_to "#{s.name}", sandwich_path(s) %><br>
+<% end %> 
