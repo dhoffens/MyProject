@@ -2,6 +2,11 @@ class SessionsController < ApplicationController
 
 	# login form
 	def new
+		if @current_user
+			redirect_to '/'
+		else
+			render :new
+		end
 	end
 
 	# to login (create a session)
@@ -17,7 +22,7 @@ class SessionsController < ApplicationController
 
 	# to logout (delete a session)
 	def destroy
-		session.clear
+		session.destroy
 		redirect_to '/'
 	end
 end
