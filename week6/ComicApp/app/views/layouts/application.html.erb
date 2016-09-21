@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>ComicApp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+  <h1> Comics Comics Comics </h1>
+
+  <p class="notice"> <%= notice %> </p>
+  <p class="alert"> <%= alert %> </p>
+
+  <% if user_signed_in? %>
+
+  <p> Welcome <%= current_user.name %>! </p>
+  <%= link_to "Logout", destroy_user_session_path, method: "delete" %>
+
+  <% end %>
+
+    <%= yield %>
+  
+  <p> Made with &hearts; at Ironhack. </p>
+  </body>
+</html>
