@@ -1,0 +1,19 @@
+<h2> Sandwichr Home </h2>
+
+<h4> Welcome to the best Sandwich builder API tool. </h4>
+
+  	<p class="notice"> <%= notice %> </p>
+  	<p class="alert"> <%= alert %> </p>
+
+<% if user_signed_in? %> 
+
+	<%= link_to "Sandwiches", sandwiches_path %>
+
+<% else %>
+
+	<%= link_to "Login", new_user_session_path %>
+	<br>
+	<br>
+	<%= link_to "Sign up", new_user_registration_path %>
+
+<% end %>

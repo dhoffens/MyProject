@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+root :to => "sandwich_views#home"
+devise_for :users
   # resources :sandwiches, except: [:new, :edit] do
   # 	resources :ingredients, except: [:new, :edit] 
   # end

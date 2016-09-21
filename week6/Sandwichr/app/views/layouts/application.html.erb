@@ -9,6 +9,15 @@
   </head>
 
   <body>
+
     <%= yield %>
+  
+    <% if user_signed_in? %>
+
+  <p> Welcome <%= current_user.email %>! </p>
+  <%= link_to "Logout", destroy_user_session_path, method: "delete" %>
+
+  <% end %>
+
   </body>
 </html>
